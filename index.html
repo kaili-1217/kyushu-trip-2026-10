@@ -1,0 +1,468 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>10 月北九州旅行（福岡、大分、熊本）</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@700;900&family=IBM+Plex+Mono:wght@500;600&display=swap">
+<style>
+:root{
+  --bg:#F3F5F2; --surface:#FFFFFF; --sunk:#E8ECE7; --ink:#18202B; --muted:#5A6572; --line:#D6DCD6;
+  --accent:#1D6B57; --accent-soft:#DCEDE6; --warn:#A8481F; --warn-soft:#F7E6DC; --drive:#1D6B57; --transit:#34568B; --transit-soft:#E1E8F3;
+  --serif:"Noto Serif TC","Songti TC","PMingLiU",serif;
+  --sans:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#0F141A; --surface:#172029; --sunk:#1D2832; --ink:#E6EBEF; --muted:#9BA7B3; --line:#2A3743;
+    --accent:#62C3A5; --accent-soft:#17362E; --warn:#E89067; --warn-soft:#3A2419; --drive:#62C3A5; --transit:#8FB0E3; --transit-soft:#1C2940;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#0F141A; --surface:#172029; --sunk:#1D2832; --ink:#E6EBEF; --muted:#9BA7B3; --line:#2A3743;
+  --accent:#62C3A5; --accent-soft:#17362E; --warn:#E89067; --warn-soft:#3A2419; --drive:#62C3A5; --transit:#8FB0E3; --transit-soft:#1C2940;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15.5px;line-height:1.7;padding-inline:16px;padding-block:0 64px}
+.wrap{max-width:860px;margin:0 auto}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:4px}
+h1,h2,h3{font-family:var(--serif);text-wrap:balance;margin:0;line-height:1.3}
+b,strong{font-weight:700}
+
+/* header */
+header.top{padding-block:40px 24px;display:grid;gap:14px}
+.eyebrow{font-family:var(--mono);font-size:12.5px;letter-spacing:.12em;color:var(--muted);text-transform:uppercase}
+h1{font-size:clamp(28px,6vw,44px);font-weight:900;letter-spacing:.02em}
+.route{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;font-size:14.5px;color:var(--muted)}
+.route span.stop{color:var(--ink);font-weight:500}
+.route span.arr{color:var(--line)}
+.flights{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;margin-top:6px}
+.flight{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 14px;display:grid;gap:2px}
+.flight .f-code{font-family:var(--mono);font-weight:600;font-size:13px;color:var(--muted);letter-spacing:.05em}
+.flight .f-route{font-family:var(--mono);font-weight:600;font-size:20px;font-variant-numeric:tabular-nums}
+.flight .f-date{font-size:13.5px;color:var(--muted)}
+.meta{font-size:13.5px;color:var(--muted)}
+
+/* sticky day nav */
+nav.days{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);margin-inline:-16px;padding:10px 16px;border-bottom:1px solid var(--line)}
+nav.days .scroller{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+nav.days .scroller::-webkit-scrollbar{display:none}
+nav.days a{flex:0 0 auto;text-decoration:none;color:var(--ink);font-size:13px;padding:6px 11px;border-radius:999px;border:1px solid var(--line);background:var(--surface);white-space:nowrap;display:flex;gap:6px;align-items:center}
+nav.days a .d{font-family:var(--mono);font-weight:600;font-variant-numeric:tabular-nums}
+nav.days a .dot{width:7px;height:7px;border-radius:50%;background:var(--transit)}
+nav.days a .dot.car{background:var(--drive)}
+
+section{padding-top:44px;scroll-margin-top:64px}
+h2{font-size:clamp(22px,4.4vw,28px);font-weight:900;margin-bottom:14px}
+h3{font-size:17px;font-weight:700;margin-block:18px 8px;font-family:var(--sans)}
+p{margin:0 0 10px;max-width:68ch}
+ul{margin:0 0 10px;padding-left:1.2em}
+li{margin-bottom:4px}
+
+/* overview */
+.tbl-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:10px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;font-size:14.5px;min-width:560px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:0}
+th{font-size:12.5px;color:var(--muted);font-weight:500;letter-spacing:.06em;background:var(--sunk)}
+td.date{font-family:var(--mono);font-weight:600;white-space:nowrap;font-variant-numeric:tabular-nums}
+td.date a{color:var(--ink);text-decoration:none}
+td.date a:hover{color:var(--accent)}
+
+/* mode chips */
+.mode{display:inline-flex;align-items:center;gap:5px;font-size:12.5px;font-weight:500;padding:2px 9px;border-radius:999px;white-space:nowrap;background:var(--transit-soft);color:var(--transit)}
+.mode.car{background:var(--accent-soft);color:var(--drive)}
+
+/* map pin link */
+a.pin{white-space:nowrap}
+a.pin::after{content:"";display:inline-block;width:.8em;height:.8em;margin-left:3px;vertical-align:-.05em;background:currentColor;
+  -webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z'/%3E%3C/svg%3E") center/contain no-repeat;
+  mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z'/%3E%3C/svg%3E") center/contain no-repeat}
+
+/* day header */
+.day-head{display:grid;grid-template-columns:auto 1fr;gap:4px 16px;align-items:end;margin-bottom:16px;padding-bottom:14px;border-bottom:2px solid var(--ink)}
+.day-num{font-family:var(--mono);font-weight:600;font-size:clamp(34px,8vw,52px);line-height:1;letter-spacing:-.02em;font-variant-numeric:tabular-nums;grid-row:span 2}
+.day-num small{display:block;font-family:var(--sans);font-size:13px;font-weight:500;letter-spacing:.1em;color:var(--muted);margin-top:6px}
+.day-head h2{margin:0;font-size:clamp(19px,4vw,24px)}
+.day-head .sub{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;font-size:13.5px;color:var(--muted)}
+
+/* timeline */
+ol.tl{list-style:none;margin:0;padding:0;display:grid;border-left:2px solid var(--line);margin-left:6px}
+ol.tl li{display:grid;grid-template-columns:96px 1fr;gap:4px 16px;padding:10px 0 10px 18px;position:relative;margin:0}
+ol.tl li::before{content:"";position:absolute;left:-7px;top:17px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--muted)}
+ol.tl li.key::before{background:var(--accent);border-color:var(--accent)}
+ol.tl .t{font-family:var(--mono);font-weight:600;font-size:14px;color:var(--muted);font-variant-numeric:tabular-nums;padding-top:1px;white-space:nowrap}
+ol.tl li.key .t{color:var(--accent)}
+ol.tl .what{min-width:0}
+ol.tl .n{display:block;font-size:13.5px;color:var(--muted);margin-top:2px}
+@media (max-width:560px){
+  ol.tl li{grid-template-columns:1fr;gap:0}
+}
+
+/* callouts */
+.call{border-radius:10px;padding:12px 14px;margin-block:14px;font-size:14.5px;background:var(--accent-soft)}
+.call.warn{background:var(--warn-soft)}
+.call .lbl{display:block;font-weight:700;font-size:13px;letter-spacing:.06em;margin-bottom:2px;color:var(--accent)}
+.call.warn .lbl{color:var(--warn)}
+.call p:last-child,.call ul:last-child{margin-bottom:0}
+
+/* rental compare */
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;margin-block:12px}
+.leg{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px;display:grid;gap:6px;align-content:start}
+.leg .lg-title{font-family:var(--mono);font-weight:600;font-size:13px;color:var(--accent);letter-spacing:.06em}
+.leg dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:4px 12px;font-size:14.5px}
+.leg dt{color:var(--muted)}
+.leg dd{margin:0}
+
+/* plan options */
+.opts{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:12px;margin-block:10px}
+.opt{border:1px solid var(--line);border-radius:10px;padding:12px 14px;background:var(--surface);font-size:14.5px}
+.opt .o-t{font-weight:700;display:block;margin-bottom:4px}
+
+/* checklist */
+.checks{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.group{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.group h3{margin-top:0;font-size:14px;letter-spacing:.08em;color:var(--muted)}
+.group label{display:grid;grid-template-columns:20px 1fr;gap:8px;align-items:start;font-size:14.5px;padding-block:5px;cursor:pointer}
+.group input{width:17px;height:17px;margin:3px 0 0;accent-color:var(--accent)}
+.group input:checked + span{color:var(--muted);text-decoration:line-through}
+.progress{font-family:var(--mono);font-size:13px;color:var(--muted);margin-bottom:10px}
+
+/* food */
+.food{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.food div{background:var(--surface);padding:12px 14px}
+.food b{display:block;font-size:13px;color:var(--muted);font-weight:500;letter-spacing:.06em}
+
+/* photos */
+.photos{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,180px),1fr));gap:10px;margin-bottom:18px}
+.photos.n2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.photos.n4{grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr))}
+.photos figure{margin:0;display:grid;gap:4px;min-width:0}
+.photos img{display:block;width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:8px;background:var(--sunk)}
+.photos figcaption{display:flex;flex-wrap:wrap;justify-content:space-between;gap:0 8px;font-size:12.5px;line-height:1.5}
+.photos .cap{color:var(--ink);font-weight:500}
+.photos .cr{color:var(--muted);text-decoration:none;font-size:11.5px}
+.photos .cr:hover{text-decoration:underline}
+@media (max-width:420px){.photos.n3{grid-template-columns:repeat(2,minmax(0,1fr))}.photos.n3 figure:first-child{grid-column:1/-1}}
+footer{margin-top:48px;padding-top:16px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+</style>
+
+<div class="wrap">
+<header class="top">
+  <div class="eyebrow">2026 · 10/15 – 10/21 · 7 天 6 夜 · 4 位成人</div>
+  <h1>10 月北九州旅行（福岡、大分、熊本）</h1>
+  <div class="route" aria-label="路線">
+    <span class="stop">福岡</span><span class="arr">→</span><span class="stop">日田</span><span class="arr">→</span><span class="stop">湯布院</span><span class="arr">→</span><span class="stop">別府</span><span class="arr">→</span><span class="stop">阿蘇</span><span class="arr">→</span><span class="stop">熊本</span><span class="arr">→</span><span class="stop">鳥栖</span><span class="arr">→</span><span class="stop">福岡</span>
+  </div>
+  <div class="flights">
+    <div class="flight"><span class="f-code">去程 · EVA AIR BR106</span><span class="f-route">TPE 08:00 → FUK 11:20</span><span class="f-date">10/15（四）· 訂位代號 EHXSGB</span></div>
+    <div class="flight"><span class="f-code">回程 · EVA AIR BR105</span><span class="f-route">FUK 12:20 → TPE 13:45</span><span class="f-date">10/21（三）· 訂位代號 EHXSGB</span></div>
+  </div>
+  <p class="meta">大約 9 點出門，傍晚結束，晚餐後自由活動。自駕日稍微緊湊，大眾運輸日放鬆一點。時間與車程都是估計值，實際以當天路況和 Google Maps 為準；地點旁有地圖圖示的都可以點開導航。</p>
+</header>
+
+<nav class="days" aria-label="跳到某一天">
+  <div class="scroller">
+    <a href="#overview"><span class="d">總覽</span></a>
+    <a href="#car"><span class="d">租車</span></a>
+    <a href="#d1015"><span class="dot"></span><span class="d">10/15</span>四</a>
+    <a href="#d1016"><span class="dot car"></span><span class="d">10/16</span>五</a>
+    <a href="#d1017"><span class="dot car"></span><span class="d">10/17</span>六</a>
+    <a href="#d1018"><span class="dot car"></span><span class="d">10/18</span>日</a>
+    <a href="#d1019"><span class="dot car"></span><span class="d">10/19</span>一</a>
+    <a href="#d1020"><span class="dot"></span><span class="d">10/20</span>二</a>
+    <a href="#d1021"><span class="dot"></span><span class="d">10/21</span>三</a>
+    <a href="#todo"><span class="d">待辦</span></a>
+    <a href="#food"><span class="d">美食</span></a>
+  </div>
+</nav>
+
+<section id="overview">
+  <h2>行程總覽</h2>
+  <div class="tbl-wrap">
+    <table>
+      <thead><tr><th>日期</th><th>交通</th><th>重點</th><th>住宿</th></tr></thead>
+      <tbody>
+        <tr><td class="date"><a href="#d1015">10/15 四</a></td><td><span class="mode">大眾運輸</span></td><td>抵達 → 博多站寄行李 → 太宰府天滿宮 → 中洲</td><td><a class="pin" href="https://www.google.com/maps/search/?api=1&amp;query=Grand+Inn+Hakata+福岡市博多区東光2丁目18-35">Grand Inn Hakata</a></td></tr>
+        <tr><td class="date"><a href="#d1016">10/16 五</a></td><td><span class="mode car">租車 1</span></td><td>日田（進擊的巨人）→ 湯布院 → 別府</td><td><a class="pin" href="https://www.google.com/maps/search/?api=1&amp;query=天然温泉+鉄輪の湯+スーパーホテル別府駅前">Super Hotel 別府站前</a></td></tr>
+        <tr><td class="date"><a href="#d1017">10/17 六</a></td><td><span class="mode car">租車 2</span></td><td>別府地獄巡禮 → 阿蘇（大觀峰、草千里）→ 熊本</td><td><a class="pin" href="https://www.google.com/maps/search/?api=1&amp;query=熊本市西区上熊本1-8-9">Casa 上熊本 1</a></td></tr>
+        <tr><td class="date"><a href="#d1018">10/18 日</a></td><td><span class="mode car">租車 3</span></td><td>熊本城 → 鳥栖 Outlet → 福岡還車</td><td><a class="pin" href="https://www.google.com/maps/search/?api=1&amp;query=Grand+Inn+Hakata+福岡市博多区東光2丁目18-35">Grand Inn Hakata</a></td></tr>
+        <tr><td class="date"><a href="#d1019">10/19 一</a></td><td><span class="mode car">租車（另租）</span></td><td>糸島 → 宮地嶽神社「光之道」</td><td><a class="pin" href="https://www.google.com/maps/search/?api=1&amp;query=Grand+Inn+Hakata+福岡市博多区東光2丁目18-35">Grand Inn Hakata</a></td></tr>
+        <tr><td class="date"><a href="#d1020">10/20 二</a></td><td><span class="mode">大眾運輸</span></td><td>柳川遊船、鰻魚飯 → 天神、博多購物（或再挑戰光之道）</td><td><a class="pin" href="https://www.google.com/maps/search/?api=1&amp;query=Grand+Inn+Hakata+福岡市博多区東光2丁目18-35">Grand Inn Hakata</a></td></tr>
+        <tr><td class="date"><a href="#d1021">10/21 三</a></td><td><span class="mode">大眾運輸</span></td><td>從容去機場</td><td>—</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="car">
+  <h2>租車安排：分兩次租</h2>
+  <p>Grand Inn Hakata <b>沒有停車場</b>，所以分兩次租。10/18 晚上不用在博多找投幣停車場過夜；10/19 不用載行李，可以租小一級的車省錢。缺點只有多辦一次取車手續（約 20～30 分鐘）。</p>
+  <div class="two">
+    <div class="leg">
+      <span class="lg-title">第一段 · 3 天</span>
+      <dl>
+        <dt>期間</dt><dd>10/16 09:00 → 10/18 約 19:00</dd>
+        <dt>用途</dt><dd>4 人 + 3 個行李箱跨縣移動</dd>
+        <dt>車型</dt><dd>休旅車或 7 人座廂型車</dd>
+      </dl>
+    </div>
+    <div class="leg">
+      <span class="lg-title">第二段 · 1 天</span>
+      <dl>
+        <dt>期間</dt><dd>10/19 09:00 → 當晚還車</dd>
+        <dt>用途</dt><dd>只載 4 個人，不載行李</dd>
+        <dt>車型</dt><dd>一般小型或中型車</dd>
+      </dl>
+    </div>
+  </div>
+  <ul>
+    <li><b>關於 Harrier</b>：坐 4 個大人很舒服，但後車廂放 3 個大行李箱（例如 28 吋）可能偏緊。訂車時直接問「4 大人 + 3 個 XX 吋行李箱放不放得下」，放不下就改租 7 人座（第三排收起來放行李）。</li>
+    <li><b>取還車地點</b>：選 <a class="pin" href="https://maps.app.goo.gl/EfU66GXeyiFYZN2E7">博多站（筑紫口・東側）附近的營業所</a>，從飯店步行約 15 分鐘可達。確認營業時間到幾點，10/18、10/19 都是晚上還車。</li>
+    <li><b>高速公路</b>：加租 ETC 卡，櫃台詢問外國旅客的「Kyushu Expressway Pass（KEP）」划不划算。福岡都市高速不在 KEP 範圍內，要另外付費。</li>
+  </ul>
+</section>
+
+<section id="d1015">
+  <div class="day-head">
+    <div class="day-num">10/15<small>週四 · DAY 1</small></div>
+    <h2>抵達日：太宰府</h2>
+    <div class="sub"><span class="mode">大眾運輸</span>住 Grand Inn Hakata</div>
+  </div>
+  <div class="photos n2"><figure><img src="images/dazaifu.jpg" alt="太宰府天滿宮" loading="lazy" width="1200" height="900"><figcaption><span class="cap">太宰府天滿宮</span><a class="cr" href="https://commons.wikimedia.org/wiki/File:20100719_Dazaifu_Tenmangu_Shrine_3328.jpg">Jakub Hałun · CC BY-SA 4.0</a></figcaption></figure><figure><img src="images/yatai.jpg" alt="中洲屋台" loading="lazy" width="1200" height="900"><figcaption><span class="cap">中洲屋台</span><a class="cr" href="https://commons.wikimedia.org/wiki/File:Nakasu_Yatai_Stalls_(19979437930).jpg">Yoshikazu TAKADA · CC BY 2.0</a></figcaption></figure></div>
+  <ol class="tl">
+    <li><span class="t">08:00</span><div class="what">桃園出發 BR106</div></li>
+    <li><span class="t">11:20</span><div class="what">抵達 <a class="pin" href="https://maps.app.goo.gl/NKKfXPYtB8o2CsJu8">福岡機場國際線航廈</a></div></li>
+    <li><span class="t">~12:15</span><div class="what">搭國際線 → <a class="pin" href="https://maps.app.goo.gl/tQwawSqQVPQ4znY77">博多站筑紫口</a> 直達巴士<span class="n">不用先轉國內線；也可以搭接駁巴士到國內線，再轉地鐵到博多站</span></div></li>
+    <li class="key"><span class="t">~12:45</span><div class="what">在<b>筑紫口一側的置物櫃</b>寄放 3 個行李箱<span class="n">大型 ¥700、特大型 ¥1,000；28 吋以上找特大格；可用「ロッカーコンシェルジュ」查空位</span></div></li>
+    <li><span class="t">~13:00</span><div class="what"><a class="pin" href="https://maps.app.goo.gl/MJa2KTkaFtjHwsaPA">博多站</a>午餐<span class="n">博多拉麵</span></div></li>
+    <li><span class="t">~14:00</span><div class="what"><a class="pin" href="https://maps.app.goo.gl/4CvN8F6iG7Q8nJjC7">博多巴士總站</a> 1 樓 11 號乘車處，搭「旅人」直達巴士到太宰府<span class="n">約 45 分鐘，¥700</span></div></li>
+    <li class="key"><span class="t">15:00–17:30</span><div class="what"><a class="pin" href="https://maps.app.goo.gl/Up6sU4wa4wAJ2uNu9">太宰府天滿宮</a>、<a class="pin" href="https://maps.app.goo.gl/PkedjnBghf8TezdV8">表參道</a><span class="n">本殿大修已完成，5 月起恢復在本殿參拜；必吃梅枝餅</span></div></li>
+    <li><span class="t">~17:30</span><div class="what">搭巴士回<a class="pin" href="https://maps.app.goo.gl/MJa2KTkaFtjHwsaPA">博多</a></div></li>
+    <li><span class="t">~18:30</span><div class="what">博多站拿行李 → 步行約 15 分鐘到飯店入住</div></li>
+    <li><span class="t">晚上</span><div class="what"><a class="pin" href="https://maps.app.goo.gl/Q7FqoEVwNGUAAHUBA">中洲屋台</a> 或牛腸鍋<span class="n">自由時間</span></div></li>
+  </ol>
+  <div class="call"><span class="lbl">置物櫃備案</span><p>特大格數量少，3 個箱子不一定剛好都搶得到。想保險可以事先預約 ecbo cloak，或到博多站周邊的 TABINAKA、Crosta 博多等行李寄放服務。</p></div>
+</section>
+
+<section id="d1016">
+  <div class="day-head">
+    <div class="day-num">10/16<small>週五 · DAY 2</small></div>
+    <h2>日田進擊的巨人 → 湯布院 → 別府</h2>
+    <div class="sub"><span class="mode car">租車 1</span>住 Super Hotel 別府站前</div>
+  </div>
+  <div class="photos n3"><figure><img src="images/oyama.jpg" alt="大山水壩" loading="lazy" width="1200" height="900"><figcaption><span class="cap">大山水壩</span><a class="cr" href="https://commons.wikimedia.org/wiki/File:Oyama_Dam.jpg">河川一等兵 · CC BY-SA 4.0</a></figcaption></figure><figure><img src="images/yunotsubo.jpg" alt="湯之坪橫丁" loading="lazy" width="1200" height="900"><figcaption><span class="cap">湯之坪橫丁</span><a class="cr" href="https://commons.wikimedia.org/wiki/File:Yunotsubo-Yokocho_in_Yufuin_Hot_Spring.JPG">そらみみ · CC BY-SA 4.0</a></figcaption></figure><figure><img src="images/kinrin.jpg" alt="金鱗湖" loading="lazy" width="1200" height="900"><figcaption><span class="cap">金鱗湖</span><a class="cr" href="https://commons.wikimedia.org/wiki/File:Lake_Kinrinko_from_west_lakeside.JPG">そらみみ · CC BY-SA 4.0</a></figcaption></figure></div>
+  <ol class="tl">
+    <li><span class="t">09:00</span><div class="what">取車 → 回飯店載人、放行李 → 退房<span class="n">退房期限 11:00</span></div></li>
+    <li><span class="t">~09:45</span><div class="what">出發：都市高速 → 九州道 → 大分道<span class="n">約 1 小時 15 分鐘</span></div></li>
+    <li class="key"><span class="t">~11:00</span><div class="what"><a class="pin" href="https://maps.app.goo.gl/GyDBiZjoo4YH7GrJA">進擊的巨人 in HITA 博物館</a>（道之驛「水邊之鄉大山」內）<span class="n">原畫、立體展示；每月第 3 個週三休館，這天是週五沒問題</span></div></li>
+    <li class="key"><span class="t">~11:45</span><div class="what"><a class="pin" href="https://www.google.com/maps/search/?api=1&amp;query=大山ダム+進撃の巨人+銅像">大山水壩</a>：少年艾連、米卡莎、阿爾敏銅像<span class="n">往下走到下游廣場要走一段坡道，穿好走的鞋</span></div></li>
+    <li><span class="t">~12:30</span><div class="what">午餐：<a class="pin" href="https://www.google.com/maps/search/?api=1&amp;query=日田焼きそば">日田炒麵</a></div></li>
+    <li><span class="t">13:15</span><div class="what">（可選）<a class="pin" href="https://www.google.com/maps/search/?api=1&amp;query=日田駅+リヴァイ兵長+銅像">日田站前里維兵長像</a> / <a class="pin" href="https://www.google.com/maps/search/?api=1&amp;query=進撃の巨人+in+HITA+ミュージアム+ANNEX">ANNEX 博物館</a><span class="n">ANNEX 在札幌啤酒工廠內，10:00–19:00，¥700；看大家體力和興趣決定</span></div></li>
+    <li><span class="t">~13:45</span><div class="what">大分道 日田 → 湯布院<span class="n">約 50 分鐘</span></div></li>
+    <li class="key"><span class="t">14:45–17:00</span><div class="what">湯布院：<a class="pin" href="https://maps.app.goo.gl/xNwGrYKnQPqyZaZs9">湯之坪街道</a>、<a class="pin" href="https://maps.app.goo.gl/EaSjBVP3sS2szfBQ9">金鱗湖</a><span class="n">店家大多 17:00 左右關門</span></div></li>
+    <li><span class="t">~17:00</span><div class="what">開往別府<span class="n">約 40 分鐘</span></div></li>
+    <li><span class="t">~17:45</span><div class="what"><a class="pin" href="https://www.google.com/maps/search/?api=1&amp;query=天然温泉+鉄輪の湯+スーパーホテル別府駅前">Super Hotel 別府站前</a> check-in<span class="n">停車場不用預約，一晚 ¥500</span></div></li>
+    <li><span class="t">晚上</span><div class="what"><a class="pin" href="https://maps.app.goo.gl/9ZWKK4BTTmMTn1faA">別府站周邊</a> 晚餐 → 泡飯店天然溫泉<span class="n">必吃：炸雞天婦羅、別府冷麵</span></div></li>
+  </ol>
+  <div class="call"><span class="lbl">泡湯安排（便宜、方便）</span>
+    <ul>
+      <li>Super Hotel 有男女分開的天然溫泉大浴場「鐵輪之湯」，入住免費泡（15:00～隔天 09:00），早餐也免費（06:30～09:00）。</li>
+      <li>想在湯布院泡：有些旅館提供純泡湯（日歸入浴），可到 <a class="pin" href="https://www.google.com/maps/search/?api=1&amp;query=由布院駅+観光案内所">湯布院觀光案內所</a> 詢問；時間不夠也可以只泡足湯。</li>
+    </ul>
+  </div>
+</section>
+
+<section id="d1017">
+  <div class="day-head">
+    <div class="day-num">10/17<small>週六 · DAY 3</small></div>
+    <h2>別府地獄巡禮 → 阿蘇 → 熊本</h2>
+    <div class="sub"><span class="mode car">租車 2</span>住 Casa 上熊本 1</div>
+  </div>
+  <div class="photos n4"><figure><img src="images/umi.jpg" alt="海地獄" loading="lazy" width="1200" height="900"><figcaption><span class="cap">海地獄</span><a class="cr" href="https://commons.wikimedia.org/wiki/File:Umi_Jigoku_2.jpg">Leyo · CC BY-SA 2.5 CH</a></figcaption></figure><figure><img src="images/chinoike.jpg" alt="血之池地獄" loading="lazy" width="1200" height="900"><figcaption><span class="cap">血之池地獄</span><a class="cr" href="https://commons.wikimedia.org/wiki/File:Rainstorm_at_Chinoike_Jigoku_(%22Blood_Pond_Hell%22),_Beppu,_Kyushu,_Japan.jpg">OKJaguar · CC BY-SA 4.0</a></figcaption></figure><figure><img src="images/daikanbo.jpg" alt="阿蘇破火山口" loading="lazy" width="1200" height="900"><figcaption><span class="cap">阿蘇破火山口</span><a class="cr" href="https://commons.wikimedia.org/wiki/File:Mt.Aso_and_caldera01.jpg">Miya.m · CC BY-SA 3.0</a></figcaption></figure><figure><img src="images/kusasenri.jpg" alt="草千里" loading="lazy" width="1200" height="900"><figcaption><span class="cap">草千里</span><a class="cr" href="https://commons.wikimedia.org/wiki/File:Kusasenrigahama_in_Aso_City_2007_0811_03.jpg">Project Kei · CC BY-SA 4.0</a></figcaption></figure></div>
+  <div class="call warn"><span class="lbl">時間壓力</span><p>Casa 上熊本必須在 <b>18:00 前入住</b>，晚到要事先聯絡民宿。</p></div>
+  <ol class="tl">
+    <li><span class="t">07:30</span><div class="what">飯店早餐、早上泡湯</div></li>
+    <li><span class="t">08:45</span><div class="what">退房出發</div></li>
+    <li class="key"><span class="t">09:00–11:15</span><div class="what">別府地獄巡禮：鐵輪地區的 <a class="pin" href="https://www.google.com/maps/search/?api=1&amp;query=海地獄+別府">海地獄</a>、<a class="pin" href="https://maps.app.goo.gl/mQNajMXNC82zczuV8">鬼石坊主地獄</a>、<a class="pin" href="https://maps.app.goo.gl/GYVGf4Q2xAP5Toxw6">灶地獄</a>、<a class="pin" href="https://maps.app.goo.gl/n1rbW772fT3crpkk9">鬼山地獄</a>、<a class="pin" href="https://maps.app.goo.gl/twyarnJwrhgcMoPi6">白池地獄</a>；再開車去 <a class="pin" href="https://maps.app.goo.gl/txm6iKFWwE7yvcJM7">血之池地獄</a>、<a class="pin" href="https://maps.app.goo.gl/DAApcxZR8Cvx5W669">龍卷地獄</a><span class="n">08:00–17:00；買 7 處共通觀覽券</span></div></li>
+    <li><span class="t">11:15</span><div class="what">午餐：<a class="pin" href="https://www.google.com/maps/search/?api=1&amp;query=地獄蒸し工房+鉄輪">地獄蒸工房 鐵輪</a>（用溫泉蒸氣自己蒸食材）<span class="n">週六人多</span></div></li>
+    <li><span class="t">12:15</span><div class="what">經山並高速道路前往阿蘇<span class="n">約 1.5 小時，景色很好的兜風路線</span></div></li>
+    <li class="key"><span class="t">~13:45</span><div class="what"><a class="pin" href="https://www.google.com/maps/search/?api=1&amp;query=大観峰+阿蘇">大觀峰</a>：看阿蘇破火山口全景</div></li>
+    <li class="key"><span class="t">~14:45</span><div class="what"><a class="pin" href="https://maps.app.goo.gl/LfcRnwrYJCj2cZe67">草千里</a>、<a class="pin" href="https://www.google.com/maps/search/?api=1&amp;query=阿蘇火山博物館">阿蘇火山博物館</a><span class="n">可吃阿蘇赤牛丼（也可以改成午餐）</span></div></li>
+    <li><span class="t">~15:45</span><div class="what">開往熊本市<span class="n">約 1 小時 15 分鐘</span></div></li>
+    <li><span class="t">~17:15</span><div class="what"><a class="pin" href="https://www.google.com/maps/search/?api=1&amp;query=熊本市西区上熊本1-8-9">Casa 上熊本 1</a> check-in<span class="n">可停車</span></div></li>
+    <li><span class="t">晚上</span><div class="what">搭市電到市區：<a class="pin" href="https://maps.app.goo.gl/2CJkoWjJmSeVTcuy5">上通</a>、<a class="pin" href="https://www.google.com/maps/search/?api=1&amp;query=下通+熊本">下通</a> 商店街<span class="n">必吃：馬肉刺身、熊本拉麵、太平燕</span></div></li>
+  </ol>
+  <div class="call warn"><span class="lbl">阿蘇火山口目前不開放</span><p>阿蘇山 9/1 從噴火警戒等級 3 降到 2，火山口周邊 1 公里內禁止進入，火口見學還沒恢復。草千里、火山博物館、大觀峰可以正常前往，這天以看火山景觀為主。出發前再確認最新規制。</p></div>
+</section>
+
+<section id="d1018">
+  <div class="day-head">
+    <div class="day-num">10/18<small>週日 · DAY 4</small></div>
+    <h2>熊本城 → 鳥栖 Outlet → 福岡</h2>
+    <div class="sub"><span class="mode car">租車 3</span>住 Grand Inn Hakata</div>
+  </div>
+  <div class="photos n2"><figure><img src="images/kumamoto.jpg" alt="熊本城" loading="lazy" width="1200" height="900"><figcaption><span class="cap">熊本城</span><a class="cr" href="https://commons.wikimedia.org/wiki/File:Kumamoto_Castle_06s5s4272.jpg">663highland · CC BY 2.5</a></figcaption></figure><figure><img src="images/tosu.jpg" alt="鳥栖 Premium Outlets" loading="lazy" width="1200" height="900"><figcaption><span class="cap">鳥栖 Premium Outlets</span><a class="cr" href="https://commons.wikimedia.org/wiki/File:Tosu_Premium_Outlets_01.jpg">STA3816 · CC BY-SA 4.0</a></figcaption></figure></div>
+  <ol class="tl">
+    <li><span class="t">09:30</span><div class="what">退房<span class="n">期限 10:00</span></div></li>
+    <li class="key"><span class="t">09:45–11:45</span><div class="what"><a class="pin" href="https://www.google.com/maps/search/?api=1&amp;query=熊本城">熊本城</a><span class="n">最後入場 16:00</span></div></li>
+    <li><span class="t">11:45</span><div class="what">午餐：<a class="pin" href="https://maps.app.goo.gl/aVX4goVUq5RwJxcb8">櫻之馬場 城彩苑</a>「櫻之小路」<span class="n">熊本伴手禮也可以在這裡買</span></div></li>
+    <li><span class="t">12:45</span><div class="what">九州道北上到鳥栖<span class="n">約 1 小時 10 分鐘</span></div></li>
+    <li class="key"><span class="t">14:00–17:30</span><div class="what"><a class="pin" href="https://www.google.com/maps/search/?api=1&amp;query=鳥栖プレミアム・アウトレット">鳥栖 Premium Outlets</a><span class="n">10:00–20:00；週日人多；可以在這裡買第 4 個行李箱</span></div></li>
+    <li><span class="t">17:30</span><div class="what">開回<a class="pin" href="https://maps.app.goo.gl/MJa2KTkaFtjHwsaPA">博多</a><span class="n">約 45 分鐘</span></div></li>
+    <li><span class="t">~18:30</span><div class="what">先到飯店卸行李、check-in → 還車<span class="n">確認營業所營業時間</span></div></li>
+    <li><span class="t">晚上</span><div class="what"><a class="pin" href="https://maps.app.goo.gl/MJa2KTkaFtjHwsaPA">博多</a>晚餐<span class="n">水炊雞肉鍋或牛腸鍋</span></div></li>
+  </ol>
+  <div class="call warn"><span class="lbl">熊本地震</span><p>2026 年 7 月 28 日熊本發生最大震度 7 的地震。熊本城 8/13 已恢復開放，9 月公告顯示通常營業，但城彩苑的「熊本城博物館 湧湧座」還在臨時休館。開放情況可能變動，<b>出發前一週和前一天都要看熊本城官網公告</b>。</p></div>
+</section>
+
+<section id="d1019">
+  <div class="day-head">
+    <div class="day-num">10/19<small>週一 · DAY 5</small></div>
+    <h2>糸島 → 宮地嶽神社「光之道」</h2>
+    <div class="sub"><span class="mode car">租車（另租）</span>住 Grand Inn Hakata</div>
+  </div>
+  <div class="photos n2"><figure><img src="images/futami.jpg" alt="櫻井二見浦（白色鳥居與夫婦岩）" loading="lazy" width="1200" height="900"><figcaption><span class="cap">櫻井二見浦（白色鳥居與夫婦岩）</span><a class="cr" href="https://commons.wikimedia.org/wiki/File:Futamigaura_Beach_from_observation_deck_of_Futamigaura_Cemetery_1.JPG">そらみみ · CC BY-SA 4.0</a></figcaption></figure><figure><img src="images/miyajidake.jpg" alt="宮地嶽神社拜殿與大注連繩" loading="lazy" width="1200" height="900"><figcaption><span class="cap">宮地嶽神社拜殿與大注連繩</span><a class="cr" href="https://commons.wikimedia.org/wiki/File:Haiden_of_Miyajidake_Shrine.JPG">そらみみ · CC BY-SA 4.0</a></figcaption></figure></div>
+  <ol class="tl">
+    <li><span class="t">09:00</span><div class="what">取車<span class="n">小型車即可</span></div></li>
+    <li><span class="t">09:15</span><div class="what">開往糸島<span class="n">約 50 分鐘</span></div></li>
+    <li class="key"><span class="t">~10:15</span><div class="what"><a class="pin" href="https://maps.app.goo.gl/TE7J3hK5Zo8uDqJF6">櫻井二見浦</a>：海中白色鳥居與夫婦岩</div></li>
+    <li><span class="t">~11:00</span><div class="what">海邊咖啡廳、<a class="pin" href="https://www.google.com/maps/search/?api=1&amp;query=ヤシの木ブランコ+糸島">椰子樹鞦韆</a>一帶散步拍照</div></li>
+    <li><span class="t">~12:00</span><div class="what">午餐：糸島海鮮或海景咖啡廳<span class="n">伴手禮：糸島海鹽相關商品</span></div></li>
+    <li><span class="t">13:30</span><div class="what">出發前往宮地嶽神社<span class="n">約 1 小時 10 分鐘；若確認有「夕陽祭」，提早到 13:00 出發</span></div></li>
+    <li class="key"><span class="t">~14:45</span><div class="what">抵達 <a class="pin" href="https://maps.app.goo.gl/E4Yru3mrp6JdcqWL9">宮地嶽神社</a> → 領觀覽席整理券 → 參拜（日本第一大注連繩、大太鼓、大鈴）<span class="n">免費停車場約 600 台；整理券 14:00 起發放</span></div></li>
+    <li class="key"><span class="t">~17:40</span><div class="what"><b>光之道</b>（日落前 10～15 分鐘）<span class="n">要晴天才看得到</span></div></li>
+    <li><span class="t">18:00</span><div class="what">回<a class="pin" href="https://maps.app.goo.gl/MJa2KTkaFtjHwsaPA">博多</a>（約 1 小時）→ 還車 → 晚餐</div></li>
+  </ol>
+  <div class="call"><span class="lbl">光之道看情況</span>
+    <ul>
+      <li>2026 年 10 月的正式日期還沒公布（去年是 10/16～10/22），10 月初請看宮地嶽神社官網。</li>
+      <li><b>有舉行、天氣好</b>：照上表，20 號不用再去。</li>
+      <li><b>沒有舉行</b>：還是去參拜，到參道盡頭的 <a class="pin" href="https://maps.app.goo.gl/sZKpChpfAhzKyxAfA">宮地濱</a> 海邊看夕陽。</li>
+      <li><b>19 號天氣不好</b>：20 號下午搭 JR 再去一次（見 10/20 方案 B）。</li>
+    </ul>
+  </div>
+</section>
+
+<section id="d1020">
+  <div class="day-head">
+    <div class="day-num">10/20<small>週二 · DAY 6</small></div>
+    <h2>柳川 → 購物（或再挑戰光之道）</h2>
+    <div class="sub"><span class="mode">大眾運輸</span>住 Grand Inn Hakata</div>
+  </div>
+  <div class="photos n2"><figure><img src="images/yanagawa_a.jpg" alt="柳川遊船" loading="lazy" width="1200" height="900"><figcaption><span class="cap">柳川遊船</span><a class="cr" href="https://commons.wikimedia.org/wiki/File:Yanagawa-kawakudari.jpg">みんと · Public domain</a></figcaption></figure><figure><img src="images/ohana.jpg" alt="御花（松濤園）" loading="lazy" width="1200" height="900"><figcaption><span class="cap">御花（松濤園）</span><a class="cr" href="https://commons.wikimedia.org/wiki/File:Yanagawa_Ohana_200223a.jpg">江戸村のとくぞう · CC BY-SA 4.0</a></figcaption></figure></div>
+  <ol class="tl">
+    <li><span class="t">09:00</span><div class="what">步行約 15 分鐘至博多站 → 地鐵 博多 → 天神<span class="n">約 5 分鐘</span></div></li>
+    <li><span class="t">~09:30</span><div class="what">西鐵特急 <a class="pin" href="https://maps.app.goo.gl/LiqsodwF3KUbUqk48">西鐵福岡（天神）站</a> → <a class="pin" href="https://maps.app.goo.gl/BPDBJXCigr4DesUo7">西鐵柳川站</a><span class="n">約 50 分鐘；天神站窗口可以問有沒有「電車 + 遊船」套票</span></div></li>
+    <li class="key"><span class="t">10:30–11:40</span><div class="what"><a class="pin" href="https://maps.app.goo.gl/cd9aLA6C1PwzDHmg8">柳川遊船</a><span class="n">約 70 分鐘</span></div></li>
+    <li class="key"><span class="t">12:00</span><div class="what">午餐：<a class="pin" href="https://www.google.com/maps/search/?api=1&amp;query=柳川+うなぎのせいろ蒸し">鰻魚蒸籠飯</a><span class="n">柳川名物</span></div></li>
+    <li><span class="t">13:00</span><div class="what">散步：<a class="pin" href="https://maps.app.goo.gl/bAHxNZTD36GRGnRV6">御花（立花家庭園）</a>一帶</div></li>
+    <li><span class="t">14:00</span><div class="what">回天神，下午二選一</div></li>
+  </ol>
+  <div class="opts">
+    <div class="opt"><span class="o-t">方案 A · 19 號已經看到光之道</span>天神、大名一帶逛服飾（<a class="pin" href="https://www.google.com/maps/search/?api=1&amp;query=天神地下街">天神地下街</a>、百貨公司），晚上到 <a class="pin" href="https://maps.app.goo.gl/MJa2KTkaFtjHwsaPA">博多站</a>、<a class="pin" href="https://www.google.com/maps/search/?api=1&amp;query=キャナルシティ博多">運河城</a> 買伴手禮。</div>
+    <div class="opt"><span class="o-t">方案 B · 再挑戰光之道</span>天神 → 博多 → JR 到 <a class="pin" href="https://www.google.com/maps/search/?api=1&amp;query=福間駅">福間站</a>（約 25 分鐘）→ 公車約 6 分鐘或計程車約 5 分鐘到神社 → 看完回博多，晚上在博多站採購。</div>
+  </div>
+</section>
+
+<section id="d1021">
+  <div class="day-head">
+    <div class="day-num">10/21<small>週三 · DAY 7</small></div>
+    <h2>回程</h2>
+    <div class="sub"><span class="mode">大眾運輸</span>BR105 12:20 起飛</div>
+  </div>
+  <ol class="tl">
+    <li><span class="t">07:30</span><div class="what">早餐、整理行李<span class="n">免稅品按規定打包</span></div></li>
+    <li><span class="t">09:30</span><div class="what">退房 → 前往機場（見下方二選一）</div></li>
+    <li class="key"><span class="t">~10:15</span><div class="what"><a class="pin" href="https://maps.app.goo.gl/NKKfXPYtB8o2CsJu8">國際線航廈</a>：報到、逛免稅店</div></li>
+    <li><span class="t">12:20</span><div class="what">BR105 起飛 → 13:45 抵達桃園</div></li>
+  </ol>
+  <div class="opts">
+    <div class="opt"><span class="o-t">方案 A · 地鐵 + 免費接駁</span>步行約 15 分鐘至博多站 → 地鐵 博多 → <a class="pin" href="https://maps.app.goo.gl/69wJeYq9BKG6Gtwk7">福岡機場站</a>（約 5 分鐘）→ 轉搭<b>免費接駁巴士</b>到<a class="pin" href="https://maps.app.goo.gl/NKKfXPYtB8o2CsJu8">國際線航廈</a>（約 10 分鐘）。<b>¥260 /人，4 人共 ¥1,040。</b></div>
+    <div class="opt"><span class="o-t">方案 B · 計程車直達</span>飯店門口叫車直達<a class="pin" href="https://maps.app.goo.gl/NKKfXPYtB8o2CsJu8">國際線航廈</a>（約 25–30 分鐘）。<b>約 ¥3,500–4,500 /車，4 人共費。</b>七天行李多建議這個方案，可前一晚請飯店代叫或用 Japan Taxi App 預約。</div>
+  </div>
+</section>
+
+<section id="todo">
+  <h2>出發前待辦清單</h2>
+  <p class="progress" id="progress" aria-live="polite">已完成 0 / 14</p>
+  <div class="checks">
+    <div class="group">
+      <h3>證件</h3>
+      <label><input type="checkbox" id="c1"><span>駕駛：<b>台灣駕照正本 + 日文譯本</b>（兩人都要，租車時登記為駕駛人）</span></label>
+      <label><input type="checkbox" id="c2"><span>4 人護照（租車和 KEP 都需要）</span></label>
+    </div>
+    <div class="group">
+      <h3>預約</h3>
+      <label><input type="checkbox" id="c3"><span>租車第一段：10/16 09:00 → 10/18 晚上，休旅車或 7 人座，確認行李箱放得下</span></label>
+      <label><input type="checkbox" id="c4"><span>租車第二段：10/19 09:00 → 當晚還車，小型車</span></label>
+      <label><input type="checkbox" id="c5"><span>兩段都加 ETC 卡，櫃台詢問 KEP</span></label>
+      <label><input type="checkbox" id="c6"><span>確認營業所晚上的還車時間</span></label>
+      <label><input type="checkbox" id="c7"><span>（可選）10/15 預約 ecbo cloak 行李寄放</span></label>
+    </div>
+    <div class="group">
+      <h3>聯絡住宿</h3>
+      <label><input type="checkbox" id="c8"><span>Casa 上熊本：告知 10/17 預計 17:00～18:00 抵達</span></label>
+    </div>
+    <div class="group">
+      <h3>出發前確認</h3>
+      <label><input type="checkbox" id="c9"><span>10 月初：宮地嶽神社「光之道・夕陽祭」正式日期</span></label>
+      <label><input type="checkbox" id="c10"><span>前一週：熊本城開放公告、阿蘇火山規制</span></label>
+      <label><input type="checkbox" id="c11"><span>前一天：熊本城開放公告、阿蘇火山規制</span></label>
+      <label><input type="checkbox" id="c12"><span>每天看天氣預報（光之道要晴天）</span></label>
+    </div>
+    <div class="group">
+      <h3>行前準備</h3>
+      <label><input type="checkbox" id="c13"><span>每人準備 Suica 等交通 IC 卡（地鐵、西鐵、公車都能用）</span></label>
+      <label><input type="checkbox" id="c14"><span>帶薄外套（別府、阿蘇山區早晚溫差大）</span></label>
+    </div>
+  </div>
+  <div class="call"><span class="lbl">泡湯小提醒</span><p>日本溫泉大浴場一般要全裸入浴，毛巾不要泡進池子裡。</p></div>
+  <p class="meta">打勾的狀態只存在你自己這台裝置的瀏覽器裡，其他人看不到。</p>
+</section>
+
+<section id="food">
+  <h2>各地美食參考</h2>
+  <p class="meta">當下決定就好。</p>
+  <div class="food">
+    <div><b>博多、中洲</b>博多拉麵、牛腸鍋、水炊雞肉鍋、屋台</div>
+    <div><b>太宰府</b>梅枝餅</div>
+    <div><b>日田</b>日田炒麵</div>
+    <div><b>湯布院</b>街邊小吃、甜點</div>
+    <div><b>別府</b>炸雞天婦羅、別府冷麵、地獄蒸</div>
+    <div><b>阿蘇</b>赤牛丼</div>
+    <div><b>熊本</b>馬肉刺身、熊本拉麵、太平燕</div>
+    <div><b>柳川</b>鰻魚蒸籠飯</div>
+    <div><b>糸島</b>海鮮、海景咖啡廳</div>
+  </div>
+</section>
+
+<footer>資訊整理於 2026 年 9 月 27 日。景點照片取自 Wikimedia Commons，作者與授權標在每張照片下方；部分照片拍攝於多年前，現場樣貌可能不同。營業時間、交通與規制可能變動，出發前請再確認官方公告。</footer>
+</div>
+
+<script>
+(function(){
+  var KEY='kyushu-trip-checks';
+  var boxes=[].slice.call(document.querySelectorAll('.checks input[type=checkbox]'));
+  var state={};
+  try{state=JSON.parse(localStorage.getItem(KEY)||'{}')||{};}catch(e){state={};}
+  function update(){
+    var done=boxes.filter(function(b){return b.checked}).length;
+    document.getElementById('progress').textContent='已完成 '+done+' / '+boxes.length;
+  }
+  boxes.forEach(function(b){
+    if(state[b.id]) b.checked=true;
+    b.addEventListener('change',function(){
+      state[b.id]=b.checked;
+      try{localStorage.setItem(KEY,JSON.stringify(state));}catch(e){}
+      update();
+    });
+  });
+  update();
+})();
+</script>
+
+</body></html>
