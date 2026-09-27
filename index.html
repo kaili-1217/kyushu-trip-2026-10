@@ -6,22 +6,11 @@
 <style>
 :root{
   --bg:#F3F5F2; --surface:#FFFFFF; --sunk:#E8ECE7; --ink:#18202B; --muted:#5A6572; --line:#D6DCD6;
+  color-scheme:light;
   --accent:#1D6B57; --accent-soft:#DCEDE6; --warn:#A8481F; --warn-soft:#F7E6DC; --drive:#1D6B57; --transit:#34568B; --transit-soft:#E1E8F3;
   --serif:"Noto Serif TC","Songti TC","PMingLiU",serif;
   --sans:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
   --mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
-}
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    color-scheme:dark;
-    --bg:#0F141A; --surface:#172029; --sunk:#1D2832; --ink:#E6EBEF; --muted:#9BA7B3; --line:#2A3743;
-    --accent:#62C3A5; --accent-soft:#17362E; --warn:#E89067; --warn-soft:#3A2419; --drive:#62C3A5; --transit:#8FB0E3; --transit-soft:#1C2940;
-  }
-}
-:root[data-theme="dark"]{
-  color-scheme:dark;
-  --bg:#0F141A; --surface:#172029; --sunk:#1D2832; --ink:#E6EBEF; --muted:#9BA7B3; --line:#2A3743;
-  --accent:#62C3A5; --accent-soft:#17362E; --warn:#E89067; --warn-soft:#3A2419; --drive:#62C3A5; --transit:#8FB0E3; --transit-soft:#1C2940;
 }
 *{box-sizing:border-box}
 body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:15.5px;line-height:1.7;padding-inline:16px;padding-block:0 64px}
